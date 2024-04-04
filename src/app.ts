@@ -1,3 +1,5 @@
+import "reflect-metadata";
+
 import { HttpError } from "http-errors";
 import cookieParser from "cookie-parser";
 import express, { NextFunction, Request, Response } from "express";
