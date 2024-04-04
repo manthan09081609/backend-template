@@ -1,5 +1,5 @@
-import app from "./app";
-import { calculateDiscount } from "./utils";
+import app from "../src/app";
+import { calculateDiscount } from "../src/utils";
 
 import request from "supertest";
 

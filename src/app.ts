@@ -1,9 +1,14 @@
+import { HttpError } from "http-errors";
+import cookieParser from "cookie-parser";
 import express, { NextFunction, Request, Response } from "express";
 
 import logger from "./config/logger";
-import { HttpError } from "http-errors";
 
 const app = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 app.get("/", (req, res) => {
   res.send("Welcome to Service Template");
